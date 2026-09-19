@@ -176,3 +176,18 @@ body{position:relative}
 [data-theme="light"] .oyag-demo-section{background:#eef5fa}[data-theme="light"] .oyag-demo-shell{background:#fff}[data-theme="light"] .oyag-demo-sidebar{background:#f3f8fc}[data-theme="light"] .oyag-demo-workspace{background:#fff}[data-theme="light"] .demo-welcome,[data-theme="light"] .demo-metrics article,[data-theme="light"] .demo-panels article{background:#f8fbfd;color:#102536}[data-theme="light"] .demo-metrics strong{color:#102536}
 @media(max-width:850px){.oyag-demo-shell{grid-template-columns:1fr}.oyag-demo-sidebar{border-right:0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr)}.oyag-demo-brand,.oyag-demo-sidebar>span{grid-column:1/-1}.demo-metrics{grid-template-columns:1fr 1fr}.orbit-chip{font-size:.68rem}}
 @media(max-width:600px){.oyag-demo-sidebar{grid-template-columns:1fr 1fr}.demo-metrics,.demo-panels{grid-template-columns:1fr}.oyag-demo-content,.oyag-demo-top{padding:16px}.oyag-orbit-card{min-height:360px}.orbit-chip{padding:7px 9px}.o3{left:2%}.o4{right:2%}}
+
+
+/* ===== OYAG Academy launch offer ===== */
+.course-launch-offer{margin:32px 0;padding:26px;border-radius:22px;border:1px solid color-mix(in srgb,var(--accent, #29d3c2) 35%,transparent);background:linear-gradient(135deg,rgba(9,28,44,.96),rgba(9,55,69,.92));color:#fff;box-shadow:0 18px 45px rgba(0,0,0,.16)}
+.course-launch-offer h2{margin:6px 0 10px;font-size:clamp(1.7rem,4vw,2.7rem)}
+.course-launch-offer>p:not(.eyebrow){color:#c9dbe4;line-height:1.65}
+.course-price-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:20px 0}
+.course-price-grid article{padding:14px;border-radius:14px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06)}
+.course-price-grid small,.course-price-grid del,.course-price-grid strong{display:block}
+.course-price-grid small{color:#aac0cc;font-weight:800}
+.course-price-grid del{color:#91a6b1;margin:6px 0 1px}
+.course-price-grid strong{font-size:1.2rem;color:#f1c86a}
+.course-price-grid article:first-child strong{color:#7be0ad}
+@media(max-width:900px){.course-price-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.course-price-grid{grid-template-columns:1fr}}
