@@ -1,0 +1,35 @@
+/* OYAG Dark 2 · identidade visual compartilhada do site oficial */
+:root{
+  --dark2-bg:#030914;
+  --dark2-bg-2:#061321;
+  --dark2-surface:#091728;
+  --dark2-surface-2:#0d2034;
+  --dark2-text:#eef5ff;
+  --dark2-muted:#9fb3c8;
+  --dark2-line:rgba(93,151,211,.22);
+  --dark2-blue:#2ea7ff;
+  --dark2-blue-strong:#1677ff;
+  --dark2-purple:#7a5cff;
+  --dark2-gold:#f4c960;
+  color-scheme:dark;
+}
+html[data-theme="dark"] body{background:var(--dark2-bg)!important;color:var(--dark2-text)!important}
+html[data-theme="dark"] .topbar{background:rgba(3,9,20,.94)!important;border-color:var(--dark2-line)!important;backdrop-filter:blur(18px)}
+html[data-theme="dark"] .surface,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .service-card,
+html[data-theme="dark"] .product-card,
+html[data-theme="dark"] .content-card,
+html[data-theme="dark"] .faq details,
+html[data-theme="dark"] .booking-card,
+html[data-theme="dark"] .contact-card{background:var(--dark2-surface)!important;border-color:var(--dark2-line)!important;box-shadow:0 18px 54px rgba(0,0,0,.24)}
+html[data-theme="dark"] .button.primary,
+html[data-theme="dark"] .btn-primary{background:linear-gradient(135deg,var(--dark2-blue-strong),var(--dark2-purple))!important;color:#fff!important}
+html[data-theme="dark"] .button.secondary,
+html[data-theme="dark"] .button.ghost{background:var(--dark2-surface-2)!important;color:var(--dark2-text)!important;border-color:var(--dark2-line)!important}
+html[data-theme="dark"] .eyebrow{color:var(--dark2-blue)!important}
+html[data-theme="dark"] p,
+html[data-theme="dark"] .muted{color:var(--dark2-muted)}
+html[data-theme="dark"] input,
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea{background:#07111f!important;color:var(--dark2-text)!important;border-color:var(--dark2-line)!important}
