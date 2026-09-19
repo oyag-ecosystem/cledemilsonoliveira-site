@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="robots" content="index,follow">
+  <title>Agendar Apresentação | Marketing, Tráfego e Redes Sociais</title>
+  <meta name="description" content="Agende uma apresentação para conversar sobre gestão de tráfego, gerenciamento de redes sociais ou estratégia de marketing e vendas.">
+  <link rel="canonical" href="https://cledemilsonoliveira.com/agendar/">
+  <meta name="theme-color" content="#050b14">
+  <link rel="icon" href="https://raw.githubusercontent.com/oyag-ecosystem/oyag-ecosystem/gh-pages/assets/oyag-approved-mark.png">
+  <link rel="stylesheet" href="../styles.css?v=site-20260919-04">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../config.js?v=1"></script>
+</head>
+<body class="article-shell">
+<div class="ambient-grid" aria-hidden="true"></div>
+<header class="topbar">
+  <a class="brand" href="../"><img class="brand-logo" src="https://raw.githubusercontent.com/oyag-ecosystem/oyag-ecosystem/gh-pages/assets/oyag-approved-mark.png" alt="Logo OYAG"><span><strong>Cledemilson Oliveira</strong><small>Tecnologia · Marketing · Negócios</small></span></a>
+  <nav aria-label="Navegação principal"><a href="../#sobre">Sobre</a><a href="../#solucoes">Serviços</a><a href="../curso-programacao/">Academy</a><a href="../conteudos/">Conteúdos</a><a href="../#contato">Contato</a></nav>
+  <div class="header-actions"><button id="menuToggle" class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button><button id="themeToggle" class="theme-toggle" type="button" aria-label="Alternar tema"><span>☾</span><span>Tema</span></button></div>
+</header>
+<main>
+  <section class="article-hero booking-hero">
+    <div class="breadcrumbs"><a href="../">Início</a> / Agendar apresentação</div>
+    <p class="eyebrow">Conversa estratégica</p>
+    <h1>Escolha um horário para apresentar seu negócio e entender qual serviço faz sentido.</h1>
+    <p class="lead">A conversa inicial serve para entender seu momento, objetivo, canais atuais e prioridades. A partir disso, avaliamos se gestão de tráfego, redes sociais ou uma estratégia integrada de marketing e vendas pode contribuir.</p>
+  </section>
+
+  <section class="booking-layout">
+    <aside class="booking-aside">
+      <p class="eyebrow">Como funciona</p>
+      <h2>Uma conversa objetiva, sem compromisso de contratação.</h2>
+      <ol>
+        <li><strong>Escolha o serviço</strong><span>Indique o assunto principal da conversa.</span></li>
+        <li><strong>Selecione um horário</strong><span>Você verá somente horários disponíveis.</span></li>
+        <li><strong>Apresente seu negócio</strong><span>Conte brevemente o cenário atual e o que deseja melhorar.</span></li>
+        <li><strong>Receba uma orientação inicial</strong><span>Após entender o contexto, será apresentada uma proposta quando houver aderência.</span></li>
+      </ol>
+      <div class="booking-contact"><span>Prefere falar agora?</span><a href="https://wa.me/5514991469159" target="_blank" rel="noopener noreferrer">WhatsApp · +55 14 99146-9159</a></div>
+    </aside>
+
+    <section class="booking-card" aria-labelledby="bookingTitle">
+      <div id="bookingTitle"><p class="eyebrow">Agenda OYAG</p><h2>Agendar apresentação</h2></div>
+      <form id="bookingForm">
+        <label><span>Assunto principal</span>
+          <select id="serviceType" required>
+            <option value="gestao_trafego">Gestão de tráfego pago</option>
+            <option value="redes_sociais">Gerenciamento de redes sociais</option>
+            <option value="estrategia_marketing_vendas">Estratégia de marketing e vendas</option>
+            <option value="geral">Quero entender qual serviço é mais adequado</option>
+          </select>
+        </label>
+
+        <div class="booking-fieldset">
+          <div class="booking-label"><span>Horários disponíveis</span><button type="button" id="refreshSlots" class="slot-refresh">Atualizar</button></div>
+          <div id="slots" class="slot-list"><p class="booking-muted">Consultando a agenda…</p></div>
+          <input type="hidden" id="slotStart" required>
+        </div>
+
+        <div class="booking-grid">
+          <label><span>Seu nome</span><input id="contactName" autocomplete="name" required maxlength="120"></label>
+          <label><span>WhatsApp</span><input id="contactWhatsapp" autocomplete="tel" required maxlength="30" placeholder="+55..."></label>
+          <label><span>E-mail</span><input id="contactEmail" type="email" autocomplete="email" required maxlength="180"></label>
+          <label><span>Empresa / negócio</span><input id="companyName" autocomplete="organization" maxlength="160"></label>
+          <label class="span-2"><span>Segmento do negócio</span><input id="companySegment" maxlength="160" placeholder="Ex.: restaurante, loja, prestador de serviços"></label>
+          <label class="span-2"><span>O que você quer melhorar?</span><textarea id="message" rows="4" maxlength="1500" placeholder="Conte brevemente seu objetivo, desafio ou resultado que busca."></textarea></label>
+        </div>
+
+        <label class="privacy-check"><input id="privacyConsent" type="checkbox" required><span>Li o <a href="../privacidade/" target="_blank">Aviso de Privacidade</a> e autorizo o uso destes dados para contato e organização deste agendamento.</span></label>
+
+        <div id="bookingFeedback" class="booking-feedback" aria-live="polite"></div>
+        <button id="bookButton" class="button primary large booking-submit" type="submit">Confirmar agendamento</button>
+      </form>
+    </section>
+  </section>
+</main>
+<a class="whatsapp-float" href="https://wa.me/5514991469159" target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp"><span class="whatsapp-pulse" aria-hidden="true"></span><span class="whatsapp-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path fill="currentColor" d="M16 3.2A12.5 12.5 0 0 0 5.15 21.9L3.5 28.5l6.76-1.6A12.5 12.5 0 1 0 16 3.2Zm0 22.7c-1.9 0-3.76-.52-5.38-1.5l-.39-.23-4 .94.98-3.9-.25-.4A10.2 10.2 0 1 1 16 25.9Zm5.57-7.64c-.3-.15-1.8-.89-2.08-.99-.28-.1-.48-.15-.68.15-.2.3-.78.99-.96 1.2-.18.2-.35.23-.65.08-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.68-2.08-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.94-2.25-.25-.6-.5-.52-.68-.53h-.58c-.2 0-.53.08-.8.38-.28.3-1.06 1.04-1.06 2.54 0 1.5 1.09 2.95 1.24 3.15.15.2 2.14 3.27 5.18 4.58.72.31 1.29.5 1.73.64.73.23 1.39.2 1.91.12.58-.09 1.8-.73 2.05-1.44.25-.7.25-1.3.18-1.44-.08-.12-.28-.2-.58-.35Z"/></svg></span><span class="whatsapp-copy"><strong>Fale comigo</strong><small>WhatsApp</small></span></a>
+<div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+<footer class="legal-footer"><div><strong>Cledemilson Oliveira de Assis</strong><small>Site oficial · CNPJ 26.795.214/0001-95</small></div><p><a href="../privacidade/">Privacidade</a> · <a href="mailto:contato@cledemilsonoliveira.com">contato@cledemilsonoliveira.com</a></p></footer>
+<script src="../app.js?v=site-20260919-02"></script>
+<script src="./app.js?v=agenda-01"></script>
+</body></html>
