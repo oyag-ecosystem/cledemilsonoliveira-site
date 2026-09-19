@@ -132,7 +132,7 @@ body{position:relative}
 .whatsapp-copy{display:grid;gap:1px;text-align:left;line-height:1.05}.whatsapp-copy strong{font-size:.84rem}.whatsapp-copy small{font-size:.67rem;color:rgba(255,255,255,.78);letter-spacing:.04em}
 .whatsapp-pulse{position:absolute;width:40px;height:40px;left:9px;top:9px;border:2px solid rgba(255,255,255,.7);border-radius:50%;z-index:1;animation:whatsappPulse 2.2s ease-out infinite}
 @keyframes whatsappPulse{0%{transform:scale(.85);opacity:.75}75%,100%{transform:scale(1.65);opacity:0}}
-.whatsapp-float:after{content:"Online";position:absolute;top:-8px;right:8px;padding:3px 7px;border-radius:999px;background:#fff;color:#0b4427;font-size:.6rem;font-weight:950;letter-spacing:.04em;box-shadow:0 7px 18px rgba(0,0,0,.2)}
+.whatsapp-float:after{content:"Contato";position:absolute;top:-8px;right:8px;padding:3px 7px;border-radius:999px;background:#fff;color:#0b4427;font-size:.6rem;font-weight:950;letter-spacing:.04em;box-shadow:0 7px 18px rgba(0,0,0,.2)}
 [data-theme="light"] .ambient-grid{background:
   radial-gradient(circle at 18% 15%,rgba(46,167,255,.07),transparent 22%),
   radial-gradient(circle at 84% 20%,rgba(121,92,255,.06),transparent 24%),
