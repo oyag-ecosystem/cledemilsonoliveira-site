@@ -76,3 +76,36 @@
   .sales-visual,.sales-visual>img{min-height:260px}
   .metric-row{grid-template-columns:76px minmax(0,1fr) 30px}
 }
+
+
+/* Sales visual polish · 2026-09-20 */
+.sales-hero{
+  background:
+    radial-gradient(circle at 8% 18%,rgba(46,167,255,.055),transparent 26%),
+    radial-gradient(circle at 92% 15%,rgba(122,92,255,.07),transparent 30%)
+}
+.sales-visual{
+  box-shadow:0 34px 100px rgba(0,0,0,.38),0 0 0 1px rgba(255,255,255,.015) inset
+}
+.sales-card,.sales-feature,.metric-panel,.metric-copy,.sales-process article,.offer-box{
+  background:
+    linear-gradient(145deg,rgba(11,30,50,.88),rgba(7,20,35,.92));
+  backdrop-filter:blur(10px)
+}
+.metric-fill{box-shadow:0 0 24px rgba(46,167,255,.24)}
+.offer-block{
+  box-shadow:0 34px 100px rgba(0,0,0,.28);
+  overflow:hidden;position:relative
+}
+.offer-block:before{
+  content:"";position:absolute;width:360px;height:360px;right:-150px;top:-190px;border-radius:50%;
+  background:radial-gradient(circle,rgba(46,167,255,.12),transparent 68%);pointer-events:none
+}
+.sales-final{
+  box-shadow:0 34px 90px rgba(0,0,0,.3);
+  position:relative;overflow:hidden
+}
+.sales-final:before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(circle at 50% 0,rgba(255,255,255,.09),transparent 42%)
+}
