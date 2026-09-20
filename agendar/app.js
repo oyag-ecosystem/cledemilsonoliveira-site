@@ -3,7 +3,7 @@ const sb=supabase.createClient(cfg.supabaseUrl,cfg.supabasePublishableKey,{auth:
 const slotsEl=document.querySelector('#slots'),slotInput=document.querySelector('#slotStart'),feedback=document.querySelector('#bookingFeedback'),form=document.querySelector('#bookingForm'),bookButton=document.querySelector('#bookButton');
 const params=new URLSearchParams(location.search);
 const requestedService=params.get('service');
-if(['gestao_trafego','redes_sociais','estrategia_marketing_vendas','geral'].includes(requestedService))document.querySelector('#serviceType').value=requestedService;
+if(['gestao_trafego','redes_sociais','estrategia_marketing_vendas','criacao_site','geral'].includes(requestedService))document.querySelector('#serviceType').value=requestedService;
 
 function formatDateLabel(iso){
   const d=new Date(iso);
