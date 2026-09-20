@@ -130,7 +130,7 @@
       const result=await response.json().catch(()=>({}));
       if(!response.ok||!result.ok) throw new Error(result.error||"Não foi possível enviar agora.");
       status.className="site-contact-status success";
-      status.textContent="Mensagem enviada com sucesso. Recebemos seu contato.";
+      status.textContent=result.email_sent?"Mensagem enviada com sucesso. O contato foi registrado no OYAG e encaminhado por e-mail.":"Mensagem registrada com sucesso no pipeline OYAG. A notificação por e-mail deste formulário ainda não está ativa.";
       form.reset();
       form.elements.subject.value=active.subject;
       updateMailto();
