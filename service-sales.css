@@ -40,3 +40,39 @@
 .content-hub .content-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media(max-width:1080px){.service-cards{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:800px){.service-cards,.content-hub .content-cards{grid-template-columns:1fr}}
+
+
+/* Sales pages mobile hardening · 2026-09-20 */
+@media(max-width:760px){
+  .sales-hero{padding:38px 16px 34px;gap:26px}
+  .sales-hero h1{font-size:clamp(2rem,10.4vw,2.65rem);line-height:1.01;letter-spacing:-.045em}
+  .sales-hero .lead{font-size:.98rem;line-height:1.58}
+  .sales-price{gap:8px 12px;margin-top:20px}
+  .sales-price strong{font-size:clamp(2rem,11vw,2.8rem)}
+  .sales-price small{padding-bottom:2px}
+  .sales-actions{display:grid;grid-template-columns:1fr;width:100%}
+  .sales-actions .button{width:100%;min-height:48px}
+  .sales-visual,.sales-visual>img{min-height:290px}
+  .sales-visual{border-radius:20px}
+  .visual-overlay{left:12px;right:12px;bottom:12px;padding:15px}
+  .visual-overlay strong{font-size:1.1rem}
+  .sales-section{padding:52px 16px}
+  .sales-section-heading{margin-bottom:24px}
+  .sales-section-heading h2{font-size:clamp(1.8rem,8.7vw,2.45rem)}
+  .sales-grid,.sales-feature-grid,.metric-shell,.sales-process{grid-template-columns:minmax(0,1fr)}
+  .sales-card,.sales-feature,.metric-panel,.metric-copy,.sales-process article{padding:18px}
+  .metric-row{grid-template-columns:88px minmax(0,1fr) 34px;gap:8px}
+  .metric-row span{font-size:.7rem}
+  .offer-block{margin:8px 12px 56px;padding:22px 16px;border-radius:20px;grid-template-columns:1fr}
+  .offer-block h2{font-size:clamp(1.9rem,8.7vw,2.5rem)}
+  .offer-box{padding:18px}
+  .sales-faq details{padding:15px 16px}
+  .sales-final{margin:0 12px 58px;padding:34px 16px;border-radius:20px}
+  .sales-final h2{font-size:clamp(1.9rem,8.7vw,2.55rem)}
+  .service-card-image{aspect-ratio:16/10}
+}
+@media(max-width:380px){
+  .sales-hero,.sales-section{padding-left:13px;padding-right:13px}
+  .sales-visual,.sales-visual>img{min-height:260px}
+  .metric-row{grid-template-columns:76px minmax(0,1fr) 30px}
+}
