@@ -253,3 +253,114 @@ html.site-contact-open,html.site-contact-open body{overflow:hidden}
 .site-contact-note{color:#8298aa;line-height:1.45}
 .site-contact-hp{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important}
 @media(max-width:680px){.site-contact-modal{padding:9px}.site-contact-dialog{padding:24px 16px 20px;border-radius:20px;max-height:94vh}.site-contact-row{grid-template-columns:1fr}.site-contact-actions{display:grid}.site-contact-actions .button{width:100%}}
+
+
+/* ===== Mobile hardening audit · 2026-09-20 ===== */
+img,svg,video,canvas,iframe{max-width:100%}
+input,select,textarea,button{max-width:100%}
+.card,.content-card,.contact-card,.social-links a,.booking-card,.booking-aside,.prose,.article-hero,.content-hub{min-width:0}
+
+@media(max-width:760px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden}
+  body{min-width:0}
+  main{width:100%;max-width:100%;overflow-x:clip}
+
+  .topbar{
+    min-height:64px;height:auto;
+    padding:9px max(12px,env(safe-area-inset-left)) 9px max(12px,env(safe-area-inset-right));
+    gap:8px
+  }
+  .brand{min-width:0;max-width:calc(100% - 102px);gap:9px}
+  .brand>span{min-width:0}
+  .brand strong{display:block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:.82rem}
+  .brand-logo{width:36px;height:36px;flex:0 0 36px}
+  .header-actions{margin-left:auto;flex:0 0 auto;gap:5px}
+  .menu-toggle,.theme-toggle{min-width:44px;width:44px;height:44px;min-height:44px;padding:0;justify-content:center}
+  .theme-toggle>span:last-child{display:none}
+  .topbar nav{left:10px;right:10px;max-height:calc(100dvh - 78px);overflow:auto;padding-bottom:max(10px,env(safe-area-inset-bottom))}
+  .topbar nav a{min-height:44px;display:flex;align-items:center}
+
+  .hero{padding:42px 16px 58px;gap:26px}
+  .hero h1,.article-hero h1,.content-hub h1{font-size:clamp(2rem,10.5vw,2.7rem);line-height:1.02;letter-spacing:-.045em;overflow-wrap:anywhere}
+  .lead{font-size:.98rem;line-height:1.58;margin:18px 0 24px}
+  .hero-actions,.academy-actions{width:100%;grid-template-columns:1fr}
+  .hero-actions .button,.academy-actions .button{width:100%;min-height:48px}
+  .hero-visual{padding:14px;border-radius:20px}
+  .hub-card{min-height:300px;padding:18px}
+  .hub-grid{grid-template-columns:1fr;gap:7px}
+  .trust-list{gap:8px 14px;font-size:.78rem}
+
+  .proof{width:100%;max-width:none}
+  .section{padding:56px 16px}
+  .section-heading{margin-bottom:26px}
+  .section h2,.final-cta h2{font-size:clamp(1.85rem,8.8vw,2.45rem);line-height:1.05}
+  .intro,.academy,.content-section{gap:30px}
+  .intro-grid{gap:12px}
+  .intro-grid p,.feature-grid article,.card{padding:18px}
+  .cards,.feature-grid,.contact-grid,.social-links,.discovery-grid{grid-template-columns:minmax(0,1fr)}
+  .card{min-height:0}
+  .card h3{margin-top:14px}
+  .contact-card strong,.contact-card small,.legal-footer a,.booking-contact a{overflow-wrap:anywhere;word-break:break-word}
+
+  .portrait-frame,.portrait-frame>img{min-height:300px}
+  .portrait-brand{left:10px;right:10px;bottom:10px;padding:10px}
+  .about-profile{grid-template-columns:68px minmax(0,1fr)}
+  .about-profile>img{width:68px;height:68px}
+
+  .article-hero{padding:22px 16px 26px}
+  .prose{padding:22px 16px 64px}
+  .content-hub{padding:42px 16px 70px}
+  .content-cards{grid-template-columns:minmax(0,1fr)!important;gap:12px}
+  .content-card{padding:18px}
+
+  .booking-hero{padding-bottom:18px}
+  .booking-layout{padding:4px 12px 72px;gap:14px}
+  .booking-aside,.booking-card{padding:16px;border-radius:18px}
+  .booking-aside h2,.booking-card h2{font-size:1.35rem}
+  .booking-card input,.booking-card select,.booking-card textarea{font-size:16px;min-height:48px;padding:12px}
+  .booking-card textarea{min-height:112px}
+  .booking-label{gap:10px;flex-wrap:wrap}
+  .slot-day>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .slot{width:100%;min-height:44px;padding:10px 8px}
+  .booking-submit{width:100%;min-height:50px}
+  .privacy-check{grid-template-columns:22px minmax(0,1fr)!important}
+  .privacy-check input{width:20px!important;height:20px!important}
+
+  .site-contact-modal{padding:8px;padding-top:max(8px,env(safe-area-inset-top));padding-bottom:max(8px,env(safe-area-inset-bottom))}
+  .site-contact-dialog{
+    width:100%;max-width:none;max-height:calc(100dvh - 16px);
+    border-radius:18px;padding:22px 14px 18px
+  }
+  .site-contact-dialog h2{font-size:1.65rem;padding-right:38px}
+  .site-contact-close{width:44px;height:44px;top:8px;right:8px}
+  .site-contact-row{grid-template-columns:minmax(0,1fr)}
+  .site-contact-form input,.site-contact-form textarea{font-size:16px;min-height:48px}
+  .site-contact-form textarea{min-height:124px}
+  .site-contact-actions{display:grid;grid-template-columns:1fr}
+  .site-contact-actions .button{width:100%;min-height:48px}
+
+  .whatsapp-float{
+    right:max(12px,env(safe-area-inset-right));
+    bottom:max(12px,env(safe-area-inset-bottom));
+    width:54px;height:54px;padding:0;display:grid;place-items:center;border-radius:50%
+  }
+  .whatsapp-copy{display:none!important}
+  .whatsapp-icon{display:grid;place-items:center}
+  .whatsapp-icon svg{width:27px;height:27px}
+
+  .legal-footer,footer{padding:26px 16px max(30px,env(safe-area-inset-bottom));gap:12px}
+  .legal-footer p,footer p{max-width:100%;overflow-wrap:anywhere}
+
+  .button{min-height:44px}
+  a,button,input,select,textarea{-webkit-tap-highlight-color:transparent}
+}
+
+@media(max-width:380px){
+  .topbar{padding-left:9px;padding-right:9px}
+  .brand{max-width:calc(100% - 96px)}
+  .brand strong{font-size:.76rem}
+  .hero{padding-left:13px;padding-right:13px}
+  .section,.article-hero,.prose,.content-hub{padding-left:13px;padding-right:13px}
+  .hero h1,.article-hero h1,.content-hub h1{font-size:clamp(1.9rem,10vw,2.28rem)}
+  .slot-day>div{grid-template-columns:1fr}
+}
