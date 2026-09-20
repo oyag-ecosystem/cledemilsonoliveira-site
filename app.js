@@ -139,3 +139,23 @@ if('IntersectionObserver' in window&&!reduceMotion){
   },{threshold:.08});
   staggerTargets.forEach(el=>staggerObserver.observe(el));
 }
+
+
+/* Animated SVG sales charts */
+const svgSalesCharts=document.querySelectorAll('[data-animate-svg]');
+if(svgSalesCharts.length){
+  if(reduceMotion){
+    svgSalesCharts.forEach(el=>el.classList.add('is-visible'));
+  }else if('IntersectionObserver' in window){
+    const svgObserver=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting)return;
+        entry.target.classList.add('is-visible');
+        svgObserver.unobserve(entry.target);
+      });
+    },{threshold:.24});
+    svgSalesCharts.forEach(el=>svgObserver.observe(el));
+  }else{
+    svgSalesCharts.forEach(el=>el.classList.add('is-visible'));
+  }
+}
