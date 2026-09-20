@@ -192,3 +192,38 @@ body{position:relative}
 .course-price-grid article:first-child strong{color:#7be0ad}
 @media(max-width:900px){.course-price-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.course-price-grid{grid-template-columns:1fr}}
+
+
+/* ===== OYAG Dark 2 parity · site oficial ===== */
+html[data-theme="dark"]{
+  --oyag-bg:#030914;
+  --oyag-bg-2:#061321;
+  --oyag-surface:#091728;
+  --oyag-surface-2:#0d2034;
+  --oyag-text:#eef5ff;
+  --oyag-muted:#9fb3c8;
+  --oyag-line:rgba(93,151,211,.22);
+  --oyag-blue:#2ea7ff;
+  --oyag-blue-strong:#1677ff;
+  --oyag-purple:#7a5cff;
+  --oyag-gold:#f4c960;
+}
+html[data-theme="dark"] body{background:var(--oyag-bg)!important;color:var(--oyag-text)!important}
+html[data-theme="dark"] .topbar{background:rgba(3,9,20,.94)!important;border-color:var(--oyag-line)!important;backdrop-filter:blur(18px)}
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .service-card,
+html[data-theme="dark"] .article-card,
+html[data-theme="dark"] .content-card,
+html[data-theme="dark"] .booking-card,
+html[data-theme="dark"] .booking-aside{
+  background:var(--oyag-surface)!important;color:var(--oyag-text)!important;border-color:var(--oyag-line)!important;
+  box-shadow:0 22px 64px rgba(0,0,0,.28)!important
+}
+html[data-theme="dark"] .button.primary{background:linear-gradient(135deg,var(--oyag-blue-strong),var(--oyag-purple))!important;color:#fff!important;box-shadow:0 12px 30px rgba(22,119,255,.22)!important}
+html[data-theme="dark"] .button.secondary,
+html[data-theme="dark"] .button.ghost{background:var(--oyag-surface-2)!important;color:var(--oyag-text)!important;border-color:var(--oyag-line)!important}
+html[data-theme="dark"] .eyebrow{color:var(--oyag-blue)!important}
+html[data-theme="dark"] input,
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea{background:#07111f!important;color:var(--oyag-text)!important;border-color:var(--oyag-line)!important}
+html[data-theme="dark"] footer{background:#02070e!important;border-color:var(--oyag-line)!important}
