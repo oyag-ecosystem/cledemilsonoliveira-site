@@ -33,3 +33,10 @@
 @media(max-width:930px){.sales-hero{grid-template-columns:1fr}.sales-visual{min-height:420px}.sales-visual>img{min-height:420px}.sales-grid{grid-template-columns:1fr}.sales-feature-grid{grid-template-columns:1fr}.metric-shell{grid-template-columns:1fr}.sales-process{grid-template-columns:1fr 1fr}.offer-block{grid-template-columns:1fr;margin-left:18px;margin-right:18px}}
 @media(max-width:620px){.sales-hero{padding-top:38px}.sales-visual,.sales-visual>img{min-height:330px}.sales-process{grid-template-columns:1fr}.metric-row{grid-template-columns:95px 1fr 38px}.offer-block{padding:24px 18px}.sales-actions{display:grid}.sales-actions .button{width:100%}}
 @media(prefers-reduced-motion:reduce){.metric-fill{animation:none}}
+
+
+/* Four-service commercial grids */
+.service-cards{grid-template-columns:repeat(4,1fr)}
+.content-hub .content-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:1080px){.service-cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:800px){.service-cards,.content-hub .content-cards{grid-template-columns:1fr}}
