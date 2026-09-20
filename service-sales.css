@@ -225,3 +225,211 @@
   .offer-box .button.primary,
   .sales-final .button.primary{animation:none}
 }
+
+
+/* Copy funnel, final price and animated SVG · 2026-09-20 */
+.sales-fit-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px
+}
+.sales-fit-grid article{
+  position:relative;
+  padding:22px;
+  border:1px solid rgba(93,151,211,.18);
+  border-radius:18px;
+  background:linear-gradient(145deg,rgba(9,23,40,.92),rgba(12,31,52,.86));
+  box-shadow:0 16px 46px rgba(0,0,0,.16)
+}
+.sales-fit-grid article>span{
+  display:inline-grid;place-items:center;
+  width:36px;height:36px;border-radius:11px;
+  color:#8bd1ff;font-size:.7rem;font-weight:950;
+  background:rgba(46,167,255,.09);
+  border:1px solid rgba(46,167,255,.18)
+}
+.sales-fit-grid h3{margin:15px 0 7px;font-size:1.08rem}
+.sales-fit-grid p{margin:0;color:#a8bbcc;line-height:1.58}
+
+.sales-svg-shell{
+  position:relative;
+  padding:22px 22px 16px;
+  border:1px solid rgba(93,151,211,.18);
+  border-radius:24px;
+  background:
+    radial-gradient(circle at 80% 10%,rgba(122,92,255,.09),transparent 26%),
+    linear-gradient(145deg,rgba(7,20,35,.96),rgba(11,29,49,.92));
+  box-shadow:0 26px 78px rgba(0,0,0,.24);
+  overflow:hidden
+}
+.sales-svg-chart{
+  display:block;
+  width:100%;
+  height:auto;
+  min-height:300px
+}
+.svg-grid line{
+  stroke:rgba(134,181,220,.11);
+  stroke-width:1
+}
+.svg-line{
+  stroke-dasharray:1;
+  stroke-dashoffset:1
+}
+.svg-area{
+  opacity:0;
+  transform-origin:center bottom
+}
+.svg-points circle{
+  fill:#071522;
+  stroke:#7ecbff;
+  stroke-width:5;
+  opacity:0;
+  transform-box:fill-box;
+  transform-origin:center
+}
+.svg-labels text{
+  fill:#a9bed0;
+  font:700 18px/1 system-ui,-apple-system,Segoe UI,sans-serif;
+  letter-spacing:.015em
+}
+.sales-svg-shell.is-visible .svg-line{
+  animation:svgDraw 1.55s cubic-bezier(.2,.75,.2,1) forwards
+}
+.sales-svg-shell.is-visible .svg-area{
+  animation:svgAreaIn 1.1s .35s ease forwards
+}
+.sales-svg-shell.is-visible .svg-points circle{
+  animation:svgPointIn .5s ease forwards,svgPulse 2.7s 1.3s ease-in-out infinite
+}
+.sales-svg-shell.is-visible .svg-points circle:nth-child(2){animation-delay:.3s,1.6s}
+.sales-svg-shell.is-visible .svg-points circle:nth-child(3){animation-delay:.6s,1.9s}
+.sales-svg-shell.is-visible .svg-points circle:nth-child(4){animation-delay:.9s,2.2s}
+.svg-legend{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  align-items:center;
+  padding:10px 4px 2px;
+  color:#adc1d1
+}
+.svg-legend span{display:flex;gap:8px;align-items:center;font-size:.8rem;font-weight:850}
+.svg-legend i{width:28px;height:4px;border-radius:99px;background:linear-gradient(90deg,#1677ff,#7a5cff,#2ea7ff)}
+.svg-legend small{max-width:620px;color:#73899c;font-size:.72rem;line-height:1.45;text-align:right}
+@keyframes svgDraw{to{stroke-dashoffset:0}}
+@keyframes svgAreaIn{from{opacity:0;transform:scaleY(.84)}to{opacity:1;transform:scaleY(1)}}
+@keyframes svgPointIn{from{opacity:0;transform:scale(.2)}to{opacity:1;transform:scale(1)}}
+@keyframes svgPulse{0%,100%{filter:drop-shadow(0 0 0 rgba(46,167,255,0))}50%{filter:drop-shadow(0 0 10px rgba(46,167,255,.65))}}
+
+.sales-final-offer{
+  max-width:1180px;
+  margin:10px auto 80px;
+  padding:44px;
+  border-radius:30px;
+  border:1px solid rgba(244,201,96,.25);
+  background:
+    radial-gradient(circle at 86% 4%,rgba(122,92,255,.18),transparent 30%),
+    radial-gradient(circle at 14% 100%,rgba(46,167,255,.12),transparent 34%),
+    linear-gradient(145deg,#071522,#0b2137);
+  box-shadow:0 34px 100px rgba(0,0,0,.32);
+  overflow:hidden;
+  position:relative
+}
+.sales-final-offer:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.025) 50%,transparent 70%)
+}
+.final-offer-copy{position:relative;z-index:1;max-width:880px;margin:0 auto;text-align:center}
+.final-offer-copy h2{
+  margin:8px auto 16px;
+  max-width:900px;
+  font-size:clamp(2.2rem,4.6vw,4rem);
+  line-height:1.02;
+  letter-spacing:-.045em;
+  text-wrap:balance
+}
+.final-offer-copy>p{max-width:760px;margin:0 auto;color:#afc0d2;line-height:1.68}
+.final-offer-value{
+  display:flex;
+  justify-content:center;
+  align-items:end;
+  gap:28px;
+  flex-wrap:wrap;
+  margin:30px auto 18px
+}
+.final-offer-value>div{display:grid;gap:6px}
+.final-offer-value span{
+  color:#90a6b8;
+  font-size:.7rem;
+  font-weight:950;
+  letter-spacing:.09em;
+  text-transform:uppercase
+}
+.final-offer-value del{color:#8293a4;font-size:1.2rem}
+.final-offer-price strong{
+  font-size:clamp(3rem,7vw,5.2rem);
+  line-height:.9;
+  color:#f4c960;
+  letter-spacing:-.055em;
+  text-shadow:0 0 34px rgba(244,201,96,.12)
+}
+.final-offer-price small{
+  color:#c6d5df;
+  font-size:1rem;
+  font-weight:850
+}
+.final-offer-condition{
+  max-width:760px;
+  margin:0 auto 14px;
+  padding:14px 16px;
+  border-radius:14px;
+  background:rgba(255,255,255,.035);
+  border:1px solid rgba(255,255,255,.08);
+  color:#c3d1dc;
+  line-height:1.55;
+  font-size:.84rem
+}
+.final-offer-actions{justify-content:center!important;margin-top:20px}
+.final-offer-note{
+  display:block;
+  margin-top:12px;
+  color:#8194a5;
+  font-size:.74rem
+}
+
+/* Price is intentionally revealed only at the bottom of each service page. */
+.sales-hero>.sales-price,
+.sales-contract-scope .sales-price,
+.sales-fit .sales-price,
+.sales-svg-section .sales-price{display:none!important}
+
+@media(max-width:900px){
+  .sales-fit-grid{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .sales-svg-shell{padding:12px 8px 12px;border-radius:18px}
+  .sales-svg-chart{min-height:0}
+  .svg-labels text{font-size:17px}
+  .svg-legend{display:grid;gap:7px;padding:8px 8px 2px}
+  .svg-legend small{text-align:left}
+  .sales-final-offer{
+    margin:8px 12px 58px;
+    padding:30px 16px;
+    border-radius:22px
+  }
+  .final-offer-copy h2{font-size:clamp(2rem,9vw,2.65rem)}
+  .final-offer-value{gap:18px;margin-top:24px}
+  .final-offer-price strong{font-size:clamp(3rem,15vw,4.2rem)}
+  .final-offer-actions{display:grid!important;grid-template-columns:1fr!important}
+  .final-offer-actions .button{width:100%}
+}
+@media(max-width:420px){
+  .svg-labels text{font-size:15px}
+}
+@media(prefers-reduced-motion:reduce){
+  .svg-line{stroke-dashoffset:0!important}
+  .svg-area,.svg-points circle{opacity:1!important;transform:none!important;animation:none!important}
+}
