@@ -718,3 +718,69 @@ html[data-theme="light"] .discovery-grid article:before{
   #inicio .portrait-identity-copy span{font-size:.58rem!important}
   #inicio .portrait-identity-copy small{font-size:.57rem!important}
 }
+
+
+/* ===== Portrait card header fix · 2026-09-20 ===== */
+.portrait-card-header{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 16px;
+  border:1px solid rgba(93,151,211,.2);
+  border-radius:18px;
+  background:linear-gradient(145deg,rgba(9,23,40,.94),rgba(11,31,52,.9));
+  box-shadow:0 16px 42px rgba(0,0,0,.2);
+}
+.portrait-card-header>img{
+  width:46px;
+  height:46px;
+  flex:0 0 46px;
+  object-fit:contain;
+  filter:drop-shadow(0 8px 18px rgba(46,167,255,.22));
+}
+.portrait-card-header>div{
+  min-width:0;
+  display:grid;
+  gap:3px;
+}
+.portrait-card-header strong{
+  color:#fff;
+  font-size:1.08rem;
+  line-height:1.15;
+  letter-spacing:-.015em;
+}
+.portrait-card-header span{
+  color:#82d0ff;
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.045em;
+  text-transform:uppercase;
+}
+.portrait-card-header small{
+  color:#b4c7d8;
+  font-size:.7rem;
+  font-weight:700;
+}
+[data-theme="light"] .portrait-card-header{
+  background:linear-gradient(145deg,#0a2138,#103553);
+}
+@media(max-width:760px){
+  #inicio .portrait-panel{
+    display:grid!important;
+    gap:12px!important;
+  }
+  #inicio .portrait-card-header{
+    width:100%;
+    padding:12px 13px;
+    border-radius:15px;
+    gap:10px;
+  }
+  #inicio .portrait-card-header>img{
+    width:40px;
+    height:40px;
+    flex-basis:40px;
+  }
+  #inicio .portrait-card-header strong{font-size:1rem}
+  #inicio .portrait-card-header span{font-size:.62rem}
+  #inicio .portrait-card-header small{font-size:.61rem}
+}
