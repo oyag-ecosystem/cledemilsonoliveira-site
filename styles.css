@@ -538,3 +538,106 @@ html[data-theme="light"] .discovery-grid article:before{
   .button:after,.ui-ripple{display:none!important}
   .card,.feature-grid article,.content-card,.contact-card,.social-links a,.discovery-grid article,.service-card-image{transition:none!important}
 }
+
+
+/* ===== Mobile hero emergency fix · screenshot 2026-09-20 ===== */
+@media(max-width:760px){
+  #inicio.hero{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    padding:34px 16px 48px!important;
+    overflow:hidden!important
+  }
+  #inicio.hero>.hero-copy,
+  #inicio.hero>.hero-visual{
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    margin-left:0!important;
+    margin-right:0!important
+  }
+  #inicio .hero-copy>*{
+    max-width:100%!important;
+    min-width:0!important
+  }
+  #inicio .hero-copy h1{
+    width:100%!important;
+    max-width:100%!important;
+    font-size:clamp(2rem,9.8vw,2.5rem)!important;
+    line-height:1.03!important;
+    letter-spacing:-.04em!important;
+    white-space:normal!important;
+    word-break:normal!important;
+    overflow-wrap:break-word!important;
+    text-wrap:wrap!important
+  }
+  #inicio .hero-copy .lead{
+    width:100%!important;
+    max-width:100%!important;
+    white-space:normal!important;
+    word-break:normal!important;
+    overflow-wrap:break-word!important
+  }
+  #inicio .hero-actions{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    width:100%!important;
+    max-width:100%!important;
+    gap:9px!important
+  }
+  #inicio .hero-actions .button{
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    padding:14px 12px!important;
+    white-space:normal!important;
+    text-align:center!important;
+    line-height:1.3!important
+  }
+  #inicio .trust-list{
+    width:100%!important;
+    max-width:100%!important;
+    margin-bottom:28px!important
+  }
+  #inicio .hero-visual{
+    margin-top:28px!important;
+    padding:10px!important;
+    border-radius:18px!important
+  }
+  #inicio .portrait-frame{
+    width:100%!important;
+    max-width:100%!important;
+    min-height:0!important;
+    aspect-ratio:4/5!important;
+    border-radius:16px!important;
+    overflow:hidden!important
+  }
+  #inicio .portrait-frame>img{
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    max-height:none!important;
+    object-fit:cover!important;
+    object-position:center top!important
+  }
+  #inicio .portrait-brand{
+    left:9px!important;
+    right:9px!important;
+    bottom:9px!important;
+    padding:9px 10px!important
+  }
+  #inicio .portrait-brand>img{
+    width:34px!important;
+    height:34px!important
+  }
+  #inicio .portrait-note{
+    padding:13px 3px 3px!important
+  }
+}
+@media(max-width:380px){
+  #inicio.hero{padding-left:13px!important;padding-right:13px!important}
+  #inicio .hero-copy h1{font-size:clamp(1.9rem,9.7vw,2.25rem)!important}
+}
