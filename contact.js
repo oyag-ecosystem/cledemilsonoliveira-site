@@ -122,7 +122,7 @@
     status.textContent="Enviando sua mensagem.";
 
     try{
-      const response=await fetch(ENDPOINT,{
+      const response=await fetch(ENDPOINT,{cache:"no-store",
         method:"POST",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify(payload)
@@ -130,7 +130,7 @@
       const result=await response.json().catch(()=>({}));
       if(!response.ok||!result.ok) throw new Error(result.error||"Não foi possível enviar agora.");
       status.className="site-contact-status success";
-      status.textContent=result.email_sent?"Mensagem enviada com sucesso. O contato foi registrado no OYAG e encaminhado por e-mail.":"Mensagem registrada com sucesso no pipeline OYAG. A notificação por e-mail deste formulário ainda não está ativa.";
+      status.textContent=result.email_sent?`Mensagem enviada com sucesso. Protocolo: ${result.id||"OYAG"}. O contato foi registrado no OYAG e encaminhado por e-mail.`:`Mensagem registrada no OYAG, mas a entrega por e-mail não foi confirmada. Protocolo: ${result.id||"OYAG"}.`;
       form.reset();
       form.elements.subject.value=active.subject;
       updateMailto();
