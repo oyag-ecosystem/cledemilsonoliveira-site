@@ -109,3 +109,119 @@
   content:"";position:absolute;inset:0;pointer-events:none;
   background:radial-gradient(circle at 50% 0,rgba(255,255,255,.09),transparent 42%)
 }
+
+
+/* Benefits, scope and CTA emphasis · 2026-09-20 */
+.sales-benefit-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px
+}
+.sales-benefit{
+  display:grid;
+  grid-template-columns:42px minmax(0,1fr);
+  gap:14px;
+  align-items:start;
+  padding:20px;
+  border:1px solid rgba(93,151,211,.18);
+  border-radius:18px;
+  background:linear-gradient(145deg,rgba(9,23,40,.92),rgba(12,31,52,.86));
+  box-shadow:0 16px 46px rgba(0,0,0,.16);
+  transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease
+}
+.sales-benefit:hover{
+  transform:translateY(-4px);
+  border-color:rgba(46,167,255,.38);
+  box-shadow:0 24px 64px rgba(0,0,0,.24)
+}
+.benefit-check{
+  width:38px;height:38px;border-radius:12px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,#1677ff,#7a5cff);
+  color:#fff;font-weight:950;
+  box-shadow:0 10px 26px rgba(46,167,255,.2)
+}
+.sales-benefit h3{margin:1px 0 6px;font-size:1.06rem}
+.sales-benefit p{margin:0;color:#a8bbcc;line-height:1.58}
+
+.sales-included{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px
+}
+.included-item{
+  display:grid;
+  grid-template-columns:42px minmax(0,1fr);
+  gap:12px;
+  align-items:center;
+  padding:15px 17px;
+  border:1px solid rgba(93,151,211,.16);
+  border-radius:14px;
+  background:rgba(8,21,37,.82)
+}
+.included-item>span{
+  color:#82d0ff;
+  font-size:.72rem;
+  font-weight:950;
+  letter-spacing:.08em
+}
+.included-item p{margin:0;color:#d0dce6;line-height:1.48;font-size:.9rem}
+.scope-note{
+  margin-top:16px;
+  padding:15px 17px;
+  border-radius:14px;
+  border:1px solid rgba(244,201,96,.22);
+  background:rgba(244,201,96,.065);
+  color:#dacb9d;
+  line-height:1.55;
+  font-size:.84rem
+}
+.scope-note strong{color:#f4dfa0}
+
+.sales-actions .button.primary,
+.offer-box .button.primary,
+.sales-final .button.primary{
+  min-height:50px;
+  box-shadow:0 14px 34px rgba(22,119,255,.28),0 0 0 1px rgba(255,255,255,.06) inset;
+  animation:salesCtaGlow 2.8s ease-in-out infinite
+}
+.sales-actions .button.secondary,
+.offer-box .button.secondary,
+.sales-final .button.secondary{
+  min-height:50px;
+  border-color:rgba(126,203,255,.28);
+  background:rgba(10,29,48,.9)
+}
+.sales-actions .button.primary:hover,
+.offer-box .button.primary:hover,
+.sales-final .button.primary:hover{
+  transform:translateY(-3px) scale(1.015);
+  box-shadow:0 20px 46px rgba(46,167,255,.36),0 0 0 1px rgba(255,255,255,.08) inset
+}
+@keyframes salesCtaGlow{
+  0%,100%{box-shadow:0 14px 34px rgba(22,119,255,.24),0 0 0 1px rgba(255,255,255,.05) inset}
+  50%{box-shadow:0 18px 44px rgba(122,92,255,.34),0 0 0 1px rgba(255,255,255,.08) inset}
+}
+@media(max-width:760px){
+  .sales-benefit-grid,.sales-included{grid-template-columns:minmax(0,1fr)}
+  .sales-benefit{padding:17px;grid-template-columns:38px minmax(0,1fr)}
+  .benefit-check{width:34px;height:34px}
+  .included-item{padding:14px}
+  .sales-actions .button.primary,
+  .sales-actions .button.secondary,
+  .offer-box .button.primary,
+  .offer-box .button.secondary,
+  .sales-final .button.primary,
+  .sales-final .button.secondary{min-height:52px}
+}
+@media(hover:none),(pointer:coarse){
+  .sales-benefit:hover{transform:none}
+  .sales-actions .button.primary:hover,
+  .offer-box .button.primary:hover,
+  .sales-final .button.primary:hover{transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .sales-actions .button.primary,
+  .offer-box .button.primary,
+  .sales-final .button.primary{animation:none}
+}
